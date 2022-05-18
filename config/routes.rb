@@ -7,11 +7,12 @@ Rails.application.routes.draw do
   scope :api do
     scope :v1 do
       resources :users, only: [:update, :destroy]
-      post "/signup", to: "users#create"
-      get "/me", to: "users#show"
-      post "/signin", to: "sessions#create"
-      delete "/signout", to: "sessions#destroy"
-      resources :hikes, only: 
+        post "/signup", to: "users#create"
+        get "/me", to: "users#show"
+        post "/signin", to: "sessions#create"
+        delete "/signout", to: "sessions#destroy"
+      resources :hikes, except: [:update, :destroy]
+      resources :hike_plans
     end
   end
 
