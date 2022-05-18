@@ -12,7 +12,4 @@ hike2 = Hike.create!(name: 'Coal Seam Trail to Walker Ranch Park', location: 'Wa
 hike3 = Hike.create!(name: 'Continental Divide Overlook', location: 'Eldorado Canyon State Park', length: 7.2, elevation_gain: 1302, dog_friendly: true)
 hike4 = Hike.create!(name: 'Lost Lake via Hessie Trail', location: 'Roosevelt National Forest', length: 4.0, elevation_gain: 830, dog_friendly: true)
 
-A = HikePlan.create!(date: 09/17/2022, weather: 'warm and dry', user_id: 1, hike_id: 1)
-B = HikePlan.create!(date: 10/17/2022, weather: 'cold and rainy', user_id: 1, hike_id: 2)
-C = HikePlan.create!(date: 08/17/2022, weather: 'hot and humid', user_id: 1, hike_id: 3)
-D = HikePlan.create!(date: 06/17/2022, weather: 'hot and dry', user_id: 1, hike_id: 4)
+A = HikePlan.create!(date: 09/17/2022, user_id: 1, hike_id: 1)

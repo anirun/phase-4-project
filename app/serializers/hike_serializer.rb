@@ -1,3 +1,3 @@
 class HikeSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :location, :length, :elevation_gain, :dog_friendly
 end

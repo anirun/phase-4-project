@@ -1,3 +1,3 @@
 class HikePlanSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :date, :user_id, :hike_id
 end
