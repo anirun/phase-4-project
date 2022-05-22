@@ -16,11 +16,11 @@ def authorized!
 end
 
 def invalid_record(invalid)
-  render json: {error: invalid.record.errors.full_messages.to_sentence}
+  render json: {error: invalid.record.errors.full_messages.to_sentence}, status: :unprocessable_entity
 end
 
 def no_route
-  render json: {error: "Couldn't find a resource with id #{params[:id]}"}
+  return render json: {error: "Not authorized"}, status: :unauthorized unless sessoin.include?(:user_id)
 end
 
 end

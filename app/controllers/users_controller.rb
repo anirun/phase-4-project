@@ -8,14 +8,12 @@ class UsersController < ApplicationController
     end
 
     def show
-        return render json: {error: "Not authorized"}, status: :unauthorized
-        user ||= User.find_by_id(session[:user_id])
-        render json: UserSerializer.new(user), status: :ok
+        render json: UserSerializer.new(@current_user), status: :ok
     end
 
     private
     
     def user_params
-        params.permit(:usrename, :name, :email, :password)
+        params.permit(:usrename, :name, :email, :password, :password_confirmation)
     end
 end
