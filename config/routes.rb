@@ -12,7 +12,7 @@ Rails.application.routes.draw do
         post "/signin", to: "sessions#create"
         delete "/signout", to: "sessions#destroy"
       resources :hikes, except: [:update, :destroy]
-      resources :hike_plans
+      resources :plans
     end
   end
 
