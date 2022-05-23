@@ -1,6 +1,6 @@
-class CreateHikePlans < ActiveRecord::Migration[6.1]
+class CreatePlans < ActiveRecord::Migration[6.1]
   def change
-    create_table :hike_plans do |t|
+    create_table :plans do |t|
       t.date :date
       t.integer :user_id
       t.integer :hike_id

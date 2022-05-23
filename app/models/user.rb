@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-    has_many :hike_plans, dependent: :destroy
-    has_many :hikes, through: :hike_plans
+    has_many :plans, dependent: :destroy
+    has_many :hikes, through: :plans
     
     has_secure_password
 

@@ -15,20 +15,20 @@ ActiveRecord::Schema.define(version: 2022_05_18_001008) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "hike_plans", force: :cascade do |t|
-    t.date "date"
-    t.integer "user_id"
-    t.integer "hike_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "hikes", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.integer "length"
     t.integer "elevation_gain"
     t.boolean "dog_friendly"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.date "date"
+    t.integer "user_id"
+    t.integer "hike_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
