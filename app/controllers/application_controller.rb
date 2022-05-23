@@ -20,7 +20,7 @@ def invalid_record(invalid)
 end
 
 def no_route
-  return render json: {error: "Not authorized"}, status: :unauthorized unless sessoin.include?(:user_id)
+  return render json: {error: "Not authorized"}, status: :unauthorized unless session.include?(:user_id)
 end
 
 end

@@ -1,25 +1,25 @@
-import {useState, useEffect} from "react";
-import {Link, useParams, useLocation, useHistory} from "react-router-dom";
+// import {useState, useEffect} from "react";
+// import {useParams, useLocation, useNavigate} from "react-router-dom";
 // import PlanForm from "./PlanForm";
 // import PlansList from "./PlansList";
 // import EditPlanForm from "./EditPlanForm";
 
 const PlanCard = ({plan}) => {
-    const {id} = useParams();
-    const location = useLocation();
-    const [planObj, setPlanObj] = useState(null);
-    const [editMode, setEditMode] = useState(false);
-    const history = useHistory();
+    // const {id} = useParams();
+    // const location = useLocation();
+    // const [planObj, setPlanObj] = useState(null);
+    // const [editMode, setEditMode] = useState(false);
+    // const history = useNavigate();
 
-    useEffect(() => {
-        if (!plan) {
-            fetch(`/api/v1/plans/${id}`)
-            .then(r => r.json())
-            .then(plan => {
-                setPlanObj(plan)
-            })
-        }
-    }, [plan, id])
+    // useEffect(() => {
+    //     if (!plan) {
+    //         fetch(`/api/v1/plans/${id}`)
+    //         .then(r => r.json())
+    //         .then(plan => {
+    //             setPlanObj(plan)
+    //         })
+    //     }
+    // }, [plan, id])
 
     return (
         <div>

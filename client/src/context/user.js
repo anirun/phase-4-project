@@ -6,4 +6,4 @@ function UserProvider({children}) {
 
 }
 
-// export {UserContext, UserProvider}
+export {UserProvider}

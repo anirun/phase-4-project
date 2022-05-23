@@ -8,8 +8,8 @@ const PlansContainer = () => {
     useEffect(() => {
         fetch("/api/v1/plans")
         .then(r => r.json())
-        .then(data => setPlans(data.data.map(p => p.attributes)))
-        .catch(error => alert(error))
+        .then(data => setPlans(data))
+        // .catch(error => alert(error))
     }, []);
 
     return (

@@ -2,9 +2,9 @@ const Profile = () => {
 
     return (
         <div>
-            PlanForm
+            Profile
         </div>
     )
 }
 
-export default PlanForm;
+export default Profile;

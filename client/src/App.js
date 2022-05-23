@@ -1,40 +1,43 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
-import {useEffect, useContext} from "react"
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+// import {useEffect, useContext} from "react";
 
-import {UserContext} from "./context/user"
-import Home from "./components/Home"
-import Header from "./components/Header"
-import Signup from './components/Signup';
-import Signout from './components/Signout';
-import Profile from './components/Profile';
-import Navbar from "./components/Navbar"
-import Notification from "./components/Notification"
+// import {UserContext} from "./context/user";
+// import Home from "./components/Home";
+// import Header from "./components/Header";
+// import Signin from './components/Signin';
+// import Signup from './components/Signup';
+// import Signout from './components/Signout';
+// import Profile from './components/Profile';
+// import Navbar from "./components/Navbar";
+// import Notification from "./components/Notification";
 
-import HikeCard from "./components/HikeCard"
-import HikesContainer from "./containers/HikesContainer"
-import PlanForm from "./components/PlanForm"
-import PlanCard from "./components/PlanCard"
-import PlansContainer from "./containers/PlansContainer"
+// import HikeCard from "./components/HikeCard";
+// import HikesContainer from "./containers/HikesContainer";
+// import PlanForm from "./components/PlanForm";
+// import PlanCard from "./components/PlanCard";
+// import PlansContainer from "./containers/PlansContainer";
 
 function App() {
-  const {getCurrentUser} = useContext(UserContext);
+  // const {getCurrentUser} = useContext(UserContext);
 
-  useEffect(() => {
-    getCurrentUser()
-  }, [])
+  // useEffect(() => {
+  //   getCurrentUser()
+  // }, [])
 
   return (
     <div className="App">
-      <Router>
+
+      Here!
+      {/* <Router>
         <Notification/>
         <Navbar />
         <Header slogan="Hike up!" />
-        <Switch>
+        <Routes>
           <Route path="/plans/new">
             <PlanForm />
-          </Route>
-          <Route path="/plans/:id">
+          </Route> */}
+          {/* <Route path="/plans/:id">
             <PlanCard />
           </Route>
           <Route path="/plans">
@@ -61,8 +64,8 @@ function App() {
           <Route path="/">
             <Home />
           </Route>
-        </Switch>
-      </Router>
+        </Routes>
+      </Router> */}
     </div>
   );
 }
