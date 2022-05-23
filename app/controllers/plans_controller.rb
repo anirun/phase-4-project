@@ -1,15 +1,14 @@
 class PlansController < ApplicationController
-    def index #get "/plans/:id"
-        if params[:plan_id]
-            plan = Plan.find(params[:plan_id])
-            render json: plan
-        else #get "/plans"
-            render json: PlanSerializer.new(Plan.all).serializable_hash
-        end
+    def index #get "/plans"
+        render json: PlanSerializer.new(Plan.all).serializable_hash
     end
 
-    def show #get "/comments/:id"
+    def show #get "/plans/:id"
         render json: serialized_plan
+    end
+
+    def ordered
+        render json: Plan.sort_desc_by_title
     end
 
     def create

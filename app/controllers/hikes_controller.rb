@@ -8,7 +8,7 @@ class HikesController < ApplicationController
         end
     end
 
-    def show #get "/comments/:id"
+    def show #get "/hikes/:id"
         render json: serialized_hike
     end
 end
