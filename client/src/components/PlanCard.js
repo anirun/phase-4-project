@@ -28,3 +28,5 @@ const PlanCard = ({plan}) => {
     )
 
 }
+
+export default PlanCard;
