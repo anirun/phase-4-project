@@ -11,7 +11,7 @@ Rails.application.routes.draw do
         get "/me", to: "users#show"
         post "/signin", to: "sessions#create"
         delete "/signout", to: "sessions#destroy"
-      resources :hikes, except: [:update, :destroy]
+      resources :hikes, only: [:index, :show]
       resources :plans
     end
   end
